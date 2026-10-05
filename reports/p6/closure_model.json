@@ -1,0 +1,217 @@
+{
+  "task": "predict closure within 48 hours at ticket creation",
+  "algorithm": "Spark ML logistic regression",
+  "data_scope": "2025-01-01 to 2025-11-30",
+  "split": {
+    "train": "Jan-Sep",
+    "validation": "Oct",
+    "test": "Nov"
+  },
+  "features": {
+    "categorical": [
+      "agency",
+      "complaint_type",
+      "borough",
+      "open_data_channel_type"
+    ],
+    "time_encoding": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "month_sin",
+      "month_cos"
+    ],
+    "leakage_excluded": [
+      "status",
+      "closed_date",
+      "resolution_action_updated_date",
+      "source_updated_at"
+    ]
+  },
+  "validation_thresholds": [
+    {
+      "threshold": 0.3,
+      "tp": 224260,
+      "fp": 30304,
+      "fn": 13480,
+      "tn": 68568,
+      "precision": 0.880957,
+      "recall": 0.943299,
+      "f1": 0.911063,
+      "accuracy": 0.869927
+    },
+    {
+      "threshold": 0.4,
+      "tp": 220863,
+      "fp": 23618,
+      "fn": 16877,
+      "tn": 75254,
+      "precision": 0.903395,
+      "recall": 0.929011,
+      "f1": 0.916024,
+      "accuracy": 0.879698
+    },
+    {
+      "threshold": 0.5,
+      "tp": 213440,
+      "fp": 15895,
+      "fn": 24300,
+      "tn": 82977,
+      "precision": 0.930691,
+      "recall": 0.897787,
+      "f1": 0.913943,
+      "accuracy": 0.88059
+    },
+    {
+      "threshold": 0.6,
+      "tp": 200771,
+      "fp": 9973,
+      "fn": 36969,
+      "tn": 88899,
+      "precision": 0.952677,
+      "recall": 0.844498,
+      "f1": 0.895332,
+      "accuracy": 0.860546
+    },
+    {
+      "threshold": 0.7,
+      "tp": 185145,
+      "fp": 5450,
+      "fn": 52595,
+      "tn": 93422,
+      "precision": 0.971405,
+      "recall": 0.778771,
+      "f1": 0.864487,
+      "accuracy": 0.827561
+    }
+  ],
+  "selected_threshold": 0.4,
+  "test": {
+    "rows": 304905,
+    "positive_rate": 0.69825,
+    "majority_baseline_accuracy": 0.69825,
+    "baseline_pr_auc": 0.69825,
+    "roc_auc": 0.944728,
+    "pr_auc": 0.9765,
+    "threshold": 0.4,
+    "tp": 202554,
+    "fp": 27491,
+    "fn": 10346,
+    "tn": 64514,
+    "precision": 0.880497,
+    "recall": 0.951404,
+    "f1": 0.914579,
+    "accuracy": 0.875906
+  },
+  "top_absolute_coefficients": [
+    {
+      "feature": "complaint_type_vec_Tanning",
+      "coefficient": -4.375761,
+      "absolute": 4.375761
+    },
+    {
+      "feature": "complaint_type_vec_DSNY Internal",
+      "coefficient": -4.350295,
+      "absolute": 4.350295
+    },
+    {
+      "feature": "complaint_type_vec_X-Ray Machine/Equipment",
+      "coefficient": -4.171941,
+      "absolute": 4.171941
+    },
+    {
+      "feature": "complaint_type_vec_SNW",
+      "coefficient": -4.014233,
+      "absolute": 4.014233
+    },
+    {
+      "feature": "complaint_type_vec_Mobile Food Vendor",
+      "coefficient": -3.997359,
+      "absolute": 3.997359
+    },
+    {
+      "feature": "complaint_type_vec_Calorie Labeling",
+      "coefficient": -3.970203,
+      "absolute": 3.970203
+    },
+    {
+      "feature": "complaint_type_vec_DEP Highway Condition",
+      "coefficient": -3.957992,
+      "absolute": 3.957992
+    },
+    {
+      "feature": "complaint_type_vec_Tattooing",
+      "coefficient": -3.934235,
+      "absolute": 3.934235
+    },
+    {
+      "feature": "complaint_type_vec_Radioactive Material",
+      "coefficient": -3.906085,
+      "absolute": 3.906085
+    },
+    {
+      "feature": "complaint_type_vec_Leaning Bar",
+      "coefficient": -3.904316,
+      "absolute": 3.904316
+    },
+    {
+      "feature": "complaint_type_vec_Construction Lead Dust",
+      "coefficient": -3.877301,
+      "absolute": 3.877301
+    },
+    {
+      "feature": "complaint_type_vec_Non-Residential Heat",
+      "coefficient": -3.87324,
+      "absolute": 3.87324
+    },
+    {
+      "feature": "complaint_type_vec_Poison Ivy",
+      "coefficient": -3.871848,
+      "absolute": 3.871848
+    },
+    {
+      "feature": "complaint_type_vec_Tobacco or Non-Tobacco Sale",
+      "coefficient": -3.865981,
+      "absolute": 3.865981
+    },
+    {
+      "feature": "complaint_type_vec_Food Establishment",
+      "coefficient": -3.86429,
+      "absolute": 3.86429
+    },
+    {
+      "feature": "complaint_type_vec_Smoking or Vaping",
+      "coefficient": -3.801953,
+      "absolute": 3.801953
+    },
+    {
+      "feature": "complaint_type_vec_Tunnel Condition",
+      "coefficient": -3.730595,
+      "absolute": 3.730595
+    },
+    {
+      "feature": "complaint_type_vec_Borough Office",
+      "coefficient": -3.674943,
+      "absolute": 3.674943
+    },
+    {
+      "feature": "complaint_type_vec_Dept of Investigations",
+      "coefficient": -3.618877,
+      "absolute": 3.618877
+    },
+    {
+      "feature": "complaint_type_vec_Curb Condition",
+      "coefficient": -3.608588,
+      "absolute": 3.608588
+    }
+  ],
+  "model_path": "E:\\big data\\data\\models\\closure_48h_logistic_v1",
+  "elapsed_seconds": 31.419,
+  "limitations": [
+    "single-machine Spark local mode",
+    "association rather than causal effect",
+    "public-source categories may drift",
+    "December excluded from test to reduce end-of-window censoring"
+  ]
+}

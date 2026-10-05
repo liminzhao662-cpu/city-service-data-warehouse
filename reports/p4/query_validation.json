@@ -1,0 +1,65 @@
+{
+  "Q1_primary_key": {
+    "elapsed_ms": 1.774,
+    "result_rows": 1,
+    "sample": [
+      "('42282670', 'Closed', 'DOB')"
+    ]
+  },
+  "Q2_active_cursor_page": {
+    "elapsed_ms": 0.925,
+    "result_rows": 100,
+    "sample": [
+      "('67348732', datetime.datetime(2025, 12, 31, 14, 26, 33), 'Damaged Tree', 'In Progress')",
+      "('67346370', datetime.datetime(2025, 12, 31, 14, 15, 42), 'Root/Sewer/Sidewalk Condition', 'In Progress')"
+    ]
+  },
+  "Q3_daily_trend": {
+    "elapsed_ms": 4.502,
+    "result_rows": 365,
+    "sample": [
+      "(datetime.date(2025, 1, 1), Decimal('10873'))",
+      "(datetime.date(2025, 1, 2), Decimal('13811'))"
+    ]
+  },
+  "Q4_top_complaints": {
+    "elapsed_ms": 1.386,
+    "result_rows": 20,
+    "sample": [
+      "('Illegal Parking', 577257)",
+      "('Noise - Residential', 463349)"
+    ]
+  },
+  "Q5_closed_duration": {
+    "elapsed_ms": 27109.096,
+    "result_rows": 15,
+    "sample": [
+      "('DCWP', Decimal('1338624.9539'))",
+      "('DEP', Decimal('325721.1420'))"
+    ]
+  },
+  "Q6_active_age": {
+    "elapsed_ms": 1139.134,
+    "result_rows": 13,
+    "sample": [
+      "('DCWP', 13, Decimal('3118.6154'))",
+      "('DEP', 2521, Decimal('4487.4098'))"
+    ]
+  },
+  "Q7_changed_tickets": {
+    "elapsed_ms": 2611.932,
+    "result_rows": 1,
+    "sample": [
+      "(0,)"
+    ]
+  },
+  "Q8_agency_borough": {
+    "elapsed_ms": 1.707,
+    "result_rows": 211,
+    "sample": [
+      "('NYPD', 'BROOKLYN', 'Closed', 515668)",
+      "('NYPD', 'QUEENS', 'Closed', 472536)"
+    ]
+  },
+  "passed": true
+}

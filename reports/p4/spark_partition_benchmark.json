@@ -1,0 +1,30 @@
+{
+  "spark_version": "4.0.4",
+  "full_scan": {
+    "runs_ms": [
+      6480.056,
+      791.161,
+      699.056
+    ],
+    "median_ms": 791.161,
+    "rows": 3655040,
+    "groups": 7,
+    "files": 288,
+    "file_bytes": 424843269
+  },
+  "january_partition": {
+    "runs_ms": [
+      1011.523,
+      498.766,
+      505.927
+    ],
+    "median_ms": 505.927,
+    "rows": 348180,
+    "groups": 7,
+    "files": 24,
+    "file_bytes": 40114441,
+    "plan": "AdaptiveSparkPlan isFinalPlan=false\n+- HashAggregate(keys=[status#10], functions=[count(1)], output=[status#10, count#193L])\n   +- Exchange hashpartitioning(status#10, 24), ENSURE_REQUIREMENTS, [plan_id=565]\n      +- HashAggregate(keys=[status#10], functions=[partial_count(1)], output=[status#10, count#220L])\n         +- Project [status#10]\n            +- FileScan parquet [status#10,created_year#22,created_month#23] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/E:/big data/data/warehouse/release=2025_baseline/dwd_ticket], PartitionFilters: [isnotnull(created_year#22), isnotnull(created_month#23), (created_year#22 = 2025), (created_mont..., PushedFilters: [], ReadSchema: struct<status:string>\n"
+  },
+  "january_expected_rows": 348180,
+  "january_row_count_passed": true
+}

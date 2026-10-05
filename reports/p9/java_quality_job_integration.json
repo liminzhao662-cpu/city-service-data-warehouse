@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "rulesBefore": 10,
+  "ruleCreateAndDisable": true,
+  "idempotentJobId": 3,
+  "retryStates": [
+    "QUEUED",
+    "RUNNING",
+    "QUEUED",
+    "RUNNING",
+    "FAILED"
+  ],
+  "conflictHttpStatus": 409,
+  "completedJobLinkedRunId": 3,
+  "cleanupCompleted": true,
+  "databaseRulesAreExecutionSource": true,
+  "disabledRulePreservedAfterConfigRegistration": true,
+  "enabledRuleCountDuringCheck": 9
+}

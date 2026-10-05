@@ -1,0 +1,41 @@
+{
+  "scope": "created before 2025-12-01",
+  "target": "closed within 48 hours",
+  "features_available_at_creation": [
+    "agency",
+    "complaint_type",
+    "borough",
+    "open_data_channel_type",
+    "created_hour",
+    "day_of_week",
+    "month"
+  ],
+  "split_distribution": [
+    {
+      "split": "test",
+      "rows": 304905,
+      "positive": 212900,
+      "positive_rate": 0.69825
+    },
+    {
+      "split": "train",
+      "rows": 2681420,
+      "positive": 1866674,
+      "positive_rate": 0.696151
+    },
+    {
+      "split": "validation",
+      "rows": 336612,
+      "positive": 237740,
+      "positive_rate": 0.706273
+    }
+  ],
+  "valid_closed_duration_quantiles_hours": {
+    "p25": 1.01,
+    "p50": 6.189,
+    "p75": 67.053,
+    "p90": 407.785,
+    "p95": 1201.559
+  },
+  "elapsed_seconds": 9.941
+}

@@ -1,0 +1,164 @@
+{
+  "report_version": 1,
+  "started_at_utc": "2026-09-23T04:00:18.499152+00:00",
+  "config": {
+    "dataset_id": "erm2-nwe9",
+    "baseline_start": "2025-01-01T00:00:00.000",
+    "baseline_end": "2026-01-01T00:00:00.000",
+    "sample_start": "2025-01-01T00:00:00.000",
+    "sample_end": "2025-02-01T00:00:00.000",
+    "page_size": 10000,
+    "sample_limit": 50000
+  },
+  "environment": {
+    "checked_at_utc": "2026-09-23T04:00:18.499152+00:00",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "cpu_threads": 24,
+    "project_drive_total_gib": 371.09,
+    "project_drive_free_gib": 370.69,
+    "java": {
+      "available": false,
+      "error": "FileNotFoundError"
+    },
+    "mysql": {
+      "available": false,
+      "error": "FileNotFoundError"
+    },
+    "docker": {
+      "available": false,
+      "error": "FileNotFoundError"
+    },
+    "spark_submit": {
+      "available": false,
+      "error": "FileNotFoundError"
+    }
+  },
+  "monthly_counts": [
+    {
+      "month": "2025-01",
+      "count": 348180,
+      "seconds": 0.796,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-01-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-02-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-02",
+      "count": 255364,
+      "seconds": 2.062,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-02-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-03-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-03",
+      "count": 281221,
+      "seconds": 1.953,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-03-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-04-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-04",
+      "count": 272549,
+      "seconds": 0.563,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-04-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-05-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-05",
+      "count": 295058,
+      "seconds": 0.625,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-05-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-06-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-06",
+      "count": 306442,
+      "seconds": 1.735,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-06-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-07-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-07",
+      "count": 315883,
+      "seconds": 2.062,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-07-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-08-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-08",
+      "count": 304039,
+      "seconds": 0.828,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-08-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-09-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-09",
+      "count": 302684,
+      "seconds": 1.125,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-09-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-10-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-10",
+      "count": 336612,
+      "seconds": 2.047,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-10-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-11-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-11",
+      "count": 304905,
+      "seconds": 10.235,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-11-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272025-12-01T00%3A00%3A00.000%27"
+    },
+    {
+      "month": "2025-12",
+      "count": 332103,
+      "seconds": 2.938,
+      "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272025-12-01T00%3A00%3A00.000%27+AND+created_date+%3C+%272026-01-01T00%3A00%3A00.000%27"
+    }
+  ],
+  "baseline_count": 3655040,
+  "sample": {
+    "path": "data\\raw\\p0\\nyc311_sample_50000.jsonl.gz",
+    "rows": 50000,
+    "pages": [
+      {
+        "rows": 10000,
+        "write_seconds": 0.234,
+        "last_created_date": "2025-01-01T21:12:24.000",
+        "last_unique_key": "63594049"
+      },
+      {
+        "rows": 10000,
+        "write_seconds": 0.188,
+        "last_created_date": "2025-01-02T16:13:40.000",
+        "last_unique_key": "63608961"
+      },
+      {
+        "rows": 10000,
+        "write_seconds": 0.156,
+        "last_created_date": "2025-01-03T11:37:16.000",
+        "last_unique_key": "63611941"
+      },
+      {
+        "rows": 10000,
+        "write_seconds": 0.172,
+        "last_created_date": "2025-01-04T10:48:41.000",
+        "last_unique_key": "63628008"
+      },
+      {
+        "rows": 10000,
+        "write_seconds": 0.156,
+        "last_created_date": "2025-01-05T04:07:45.000",
+        "last_unique_key": "63645129"
+      }
+    ],
+    "seconds": 18.125,
+    "rows_per_second": 2758.62,
+    "compressed_bytes": 2522410,
+    "uncompressed_bytes": 31188411,
+    "uncompressed_sha256": "8d335330ee8080345c88972de820f220d1717a5ace4b16287cc60789b7c06bc3",
+    "sample_scope": [
+      "2025-01-01T00:00:00.000",
+      "2025-02-01T00:00:00.000"
+    ],
+    "complete_requested_limit": true
+  },
+  "rough_raw_compressed_projection": {
+    "bytes_per_sample_row": 50.45,
+    "baseline_gib": 0.172,
+    "warning": "Raw gzip projection from one January sample only; database, indexes, Parquet, temp and logs are not included."
+  },
+  "finished_at_utc": "2026-09-23T04:00:50.981943+00:00"
+}

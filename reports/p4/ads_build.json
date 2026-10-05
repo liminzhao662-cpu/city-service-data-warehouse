@@ -1,0 +1,10 @@
+{
+  "release_id": 1,
+  "release_key": "2025-baseline-v1",
+  "row_counts": {
+    "ads_daily_status": 2238,
+    "ads_agency_status": 211,
+    "ads_complaint": 190
+  },
+  "elapsed_seconds": 78.113
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": 2,
+  "run_key": "baseline-2025-v1",
+  "release_key": "2025-baseline-v1",
+  "source_rows": 3655040,
+  "staged_rows": 3655040,
+  "inserted_rows": 3655040,
+  "updated_rows": 0,
+  "unchanged_rows": 0,
+  "current_rows": 3655040,
+  "observation_rows": 3655040,
+  "chunks": 24,
+  "elapsed_seconds": 750.745,
+  "status": "SUCCEEDED"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "cohort_count",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n&%24where=created_date+%3E%3D+%272026-09-14T00%3A00%3A00%27+AND+created_date+%3C+%272026-09-15T00%3A00%3A00%27+AND+borough+%3D+%27BRONX%27",
+    "started_at_utc": "2026-09-23T03:04:54.915337+00:00",
+    "http_status": 200,
+    "bytes": 15,
+    "sha256": "27d6c7ebe6ad401f8a1089d98a653cbd1355ef67247a244b6c266e671a25da45",
+    "records": 1,
+    "seconds": 0.875
+  },
+  {
+    "name": "cohort_rows",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=%3Aupdated_at%2Cunique_key%2Ccreated_date%2Cclosed_date%2Cagency%2Ccomplaint_type%2Cdescriptor%2Cstatus%2Cborough%2Cresolution_action_updated_date%2Cdue_date&%24where=created_date+%3E%3D+%272026-09-14T00%3A00%3A00%27+AND+created_date+%3C+%272026-09-15T00%3A00%3A00%27+AND+borough+%3D+%27BRONX%27&%24order=created_date%2Cunique_key&%24limit=5000",
+    "started_at_utc": "2026-09-23T03:04:54.915337+00:00",
+    "http_status": 200,
+    "bytes": 636211,
+    "sha256": "898900e7415135ba1f36e87c1a3d0bee07750bc21da4a119b58c4c7bb5107394",
+    "records": 2056,
+    "seconds": 1.0
+  },
+  {
+    "name": "updated_old_rows",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=%3Aupdated_at%2Cunique_key%2Ccreated_date%2Cclosed_date%2Cagency%2Ccomplaint_type%2Cdescriptor%2Cstatus%2Cborough%2Cresolution_action_updated_date%2Cdue_date&%24where=%3Aupdated_at+%3E%3D+%272026-09-21T00%3A00%3A00Z%27+AND+created_date+%3C+%272026-08-01T00%3A00%3A00%27&%24limit=20",
+    "started_at_utc": "2026-09-23T03:04:54.915337+00:00",
+    "http_status": 200,
+    "bytes": 6790,
+    "sha256": "a3ba271b33fdf49654c8bd69055ebc6ab3cbb5d8b5271314a31be851caa9cc8f",
+    "records": 20,
+    "seconds": 0.797
+  }
+]

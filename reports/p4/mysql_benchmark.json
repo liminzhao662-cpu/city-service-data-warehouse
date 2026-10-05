@@ -1,0 +1,54 @@
+{
+  "environment": {
+    "mysql": "8.4.11",
+    "rows": 3655040,
+    "repeats": 3,
+    "cache_note": "same session; all runs retained"
+  },
+  "composite_index": {
+    "query": "HPD/Open full-year count",
+    "without_index": {
+      "runs_ms": [
+        20523.542,
+        17649.699,
+        12624.225
+      ],
+      "median_ms": 17649.699,
+      "result_rows": 1,
+      "plan": "-> Aggregate: count(0)  (cost=416310 rows=1) (actual time=13200..13200 rows=1 loops=1)\n    -> Filter: ((ticket_current.`status` = 'Open') and (ticket_current.agency = 'HPD') and (ticket_current.created_date >= TIMESTAMP'2025-01-01 00:00:00') and (ticket_current.created_date < TIMESTAMP'2026-01-01 00:00:00'))  (cost=415022 rows=12883) (actual time=38.9..13199 rows=3155 loops=1)\n        -> Table scan on ticket_current  (cost=415022 rows=3.61e+6) (actual time=0.128..12916 rows=3.66e+6 loops=1)\n"
+    },
+    "with_index": {
+      "runs_ms": [
+        5.042,
+        1.296,
+        1.282
+      ],
+      "median_ms": 1.296,
+      "result_rows": 1,
+      "plan": "-> Aggregate: count(0)  (cost=1158 rows=1) (actual time=1.27..1.27 rows=1 loops=1)\n    -> Filter: ((ticket_current.`status` = 'Open') and (ticket_current.agency = 'HPD') and (ticket_current.created_date >= TIMESTAMP'2025-01-01 00:00:00') and (ticket_current.created_date < TIMESTAMP'2026-01-01 00:00:00'))  (cost=842 rows=3155) (actual time=0.0215..1.16 rows=3155 loops=1)\n        -> Covering index range scan on ticket_current using idx_ticket_agency_status_created over (agency = 'HPD' AND status = 'Open' AND '2026-01-01 00:00:00.000' < created_date <= '2025-01-01 00:00:00.000')  (cost=842 rows=3155) (actual time=0.0199..0.718 rows=3155 loops=1)\n"
+    },
+    "same_result": true
+  },
+  "detail_vs_ads": {
+    "detail": {
+      "runs_ms": [
+        2498.177,
+        2175.771,
+        1883.334
+      ],
+      "median_ms": 2175.771,
+      "result_rows": 2238
+    },
+    "ads": {
+      "runs_ms": [
+        26.706,
+        5.452,
+        3.851
+      ],
+      "median_ms": 5.452,
+      "result_rows": 2238
+    },
+    "same_result": true
+  },
+  "index_definition": "(agency,status,created_date DESC,unique_key DESC)"
+}

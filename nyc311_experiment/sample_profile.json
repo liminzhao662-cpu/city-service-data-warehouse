@@ -1,0 +1,236 @@
+{
+  "scope_note": "Chronological samples are not random. Cohort is only BRONX requests created 2026-09-14; values reflect observation time, not historical daily state. Durations are naive source wall-clock differences pending timezone policy.",
+  "recent_sample": {
+    "source_file": "evidence\\20260923T030357Z\\recent_sample.json",
+    "rows": 5000,
+    "unique_keys": 5000,
+    "min_created": "2026-09-14T00:00:00.000",
+    "max_created": "2026-09-14T12:23:03.000",
+    "status_counts": {
+      "Open": 697,
+      "Closed": 3720,
+      "In Progress": 571,
+      "Assigned": 11,
+      "Pending": 1
+    },
+    "agency_counts": {
+      "DOT": 415,
+      "NYPD": 2105,
+      "DEP": 230,
+      "HPD": 945,
+      "DSNY": 594,
+      "TLC": 51,
+      "DPR": 247,
+      "DOHMH": 113,
+      "DOB": 155,
+      "DHS": 104,
+      "DCWP": 27,
+      "EDC": 7,
+      "OOS": 7
+    },
+    "missing_counts": {
+      "closed_date": 1175,
+      "due_date": 4980,
+      "resolution_action_updated_date": 469
+    },
+    "system_updated_field_note": "Selected for cohort_rows only; absent in other samples by query design.",
+    "issues": {
+      "nonclosed_with_close_date": {
+        "count": 105,
+        "example_keys": [
+          "70419112",
+          "70413511",
+          "70408929",
+          "70401643",
+          "70412076",
+          "70409947",
+          "70415228",
+          "70417125",
+          "70411989",
+          "70418262"
+        ]
+      },
+      "negative_duration": {
+        "count": 2,
+        "example_keys": [
+          "70410577",
+          "70412159"
+        ]
+      }
+    },
+    "valid_closed_durations": 3718,
+    "closed_duration_median_hours": 3.66125,
+    "closed_duration_p90_hours": 74.25880555555557,
+    "source_updated_distinct": 0,
+    "source_updated_top": []
+  },
+  "historical_sample": {
+    "source_file": "evidence\\20260923T030357Z\\historical_sample.json",
+    "rows": 1000,
+    "unique_keys": 1000,
+    "min_created": "2024-01-01T00:00:00.000",
+    "max_created": "2024-01-01T02:03:31.000",
+    "status_counts": {
+      "Closed": 998,
+      "In Progress": 1,
+      "Pending": 1
+    },
+    "agency_counts": {
+      "DOHMH": 11,
+      "NYPD": 891,
+      "HPD": 47,
+      "DOB": 3,
+      "DEP": 6,
+      "TLC": 3,
+      "DOT": 5,
+      "EDC": 29,
+      "DSNY": 5
+    },
+    "missing_counts": {
+      "closed_date": 2,
+      "due_date": 1000,
+      "resolution_action_updated_date": 1
+    },
+    "system_updated_field_note": "Selected for cohort_rows only; absent in other samples by query design.",
+    "issues": {},
+    "valid_closed_durations": 998,
+    "closed_duration_median_hours": 0.6325000000000001,
+    "closed_duration_p90_hours": 20.08822222222228,
+    "source_updated_distinct": 0,
+    "source_updated_top": []
+  },
+  "cohort_rows": {
+    "source_file": "evidence\\20260923T030454Z\\cohort_rows.json",
+    "rows": 2056,
+    "unique_keys": 2056,
+    "min_created": "2026-09-14T00:00:16.000",
+    "max_created": "2026-09-14T23:59:46.000",
+    "status_counts": {
+      "Closed": 1428,
+      "Open": 485,
+      "In Progress": 139,
+      "Assigned": 3,
+      "Pending": 1
+    },
+    "agency_counts": {
+      "NYPD": 772,
+      "HPD": 734,
+      "DOB": 61,
+      "DOT": 122,
+      "DSNY": 162,
+      "EDC": 2,
+      "DEP": 89,
+      "DPR": 51,
+      "DOHMH": 40,
+      "DCWP": 9,
+      "OOS": 3,
+      "DHS": 9,
+      "TLC": 2
+    },
+    "missing_counts": {
+      "closed_date": 595,
+      "due_date": 2055,
+      "resolution_action_updated_date": 156
+    },
+    "system_updated_field_note": "Selected for cohort_rows only; absent in other samples by query design.",
+    "issues": {
+      "nonclosed_with_close_date": {
+        "count": 33,
+        "example_keys": [
+          "70419112",
+          "70417125",
+          "70416556",
+          "70409514",
+          "70415150",
+          "70412082",
+          "70417536",
+          "70408988",
+          "70407949",
+          "70415644"
+        ]
+      }
+    },
+    "valid_closed_durations": 1428,
+    "closed_duration_median_hours": 6.121388888888889,
+    "closed_duration_p90_hours": 83.38861111111112,
+    "source_updated_distinct": 2,
+    "source_updated_top": [
+      [
+        "2026-09-22T01:33:47.694Z",
+        1267
+      ],
+      [
+        "2026-09-21T01:33:54.244Z",
+        789
+      ]
+    ]
+  },
+  "cohort_count_check": {
+    "api_count": 2056,
+    "downloaded": 2056,
+    "matches": true
+  },
+  "updated_old_examples": [
+    {
+      ":updated_at": "2026-09-21T01:33:54.244Z",
+      "unique_key": "47904276",
+      "created_date": "2020-10-17T12:49:33.000",
+      "closed_date": "2020-12-22T00:00:00.000",
+      "agency": "DOB",
+      "complaint_type": "General Construction/Plumbing",
+      "descriptor": "Building Permit - None",
+      "status": "Closed",
+      "borough": "BROOKLYN",
+      "resolution_action_updated_date": "2020-12-22T00:00:00.000"
+    },
+    {
+      ":updated_at": "2026-09-21T01:33:54.244Z",
+      "unique_key": "54809483",
+      "created_date": "2022-07-16T18:04:06.000",
+      "closed_date": "2026-09-14T14:15:58.000",
+      "agency": "DPR",
+      "complaint_type": "Damaged Tree",
+      "descriptor": "Tree Alive - in Poor Condition",
+      "status": "Closed",
+      "borough": "QUEENS",
+      "resolution_action_updated_date": "2026-09-14T14:16:01.000"
+    },
+    {
+      ":updated_at": "2026-09-21T01:33:54.244Z",
+      "unique_key": "57869162",
+      "created_date": "2023-06-11T11:02:12.000",
+      "agency": "DPR",
+      "complaint_type": "Damaged Tree",
+      "descriptor": "Branch Cracked and Will Fall",
+      "status": "In Progress",
+      "borough": "BROOKLYN",
+      "resolution_action_updated_date": "2026-09-14T09:25:48.000"
+    }
+  ],
+  "recent_week_status_counts": [
+    {
+      "status": "Assigned",
+      "n": "193"
+    },
+    {
+      "status": "Open",
+      "n": "12052"
+    },
+    {
+      "status": "Unspecified",
+      "n": "6"
+    },
+    {
+      "status": "In Progress",
+      "n": "12477"
+    },
+    {
+      "status": "Pending",
+      "n": "17"
+    },
+    {
+      "status": "Closed",
+      "n": "51021"
+    }
+  ]
+}

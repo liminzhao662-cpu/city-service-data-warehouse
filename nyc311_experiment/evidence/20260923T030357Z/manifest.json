@@ -1,0 +1,457 @@
+[
+  {
+    "name": "metadata",
+    "url": "https://data.cityofnewyork.us/api/views/erm2-nwe9.json",
+    "started_at_utc": "2026-09-23T03:03:57.813520+00:00",
+    "http_status": 200,
+    "bytes": 25591,
+    "sha256": "415af7429cec516bfab97727c40240fe2ca1c0c9145861e4420c6c530b709e99",
+    "records": null,
+    "metadata": {
+      "name": "311 Service Requests from 2020 to Present",
+      "rowsUpdatedAt": 1790127495,
+      "publicationDate": 1766530877
+    },
+    "columns": [
+      {
+        "name": "Unique Key",
+        "fieldName": "unique_key",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Created Date",
+        "fieldName": "created_date",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "name": "Closed Date",
+        "fieldName": "closed_date",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "name": "Agency",
+        "fieldName": "agency",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Agency Name",
+        "fieldName": "agency_name",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Problem (formerly Complaint Type)",
+        "fieldName": "complaint_type",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Problem Detail (formerly Descriptor)",
+        "fieldName": "descriptor",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Additional Details",
+        "fieldName": "descriptor_2",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Location Type",
+        "fieldName": "location_type",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Incident Zip",
+        "fieldName": "incident_zip",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Incident Address",
+        "fieldName": "incident_address",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Street Name",
+        "fieldName": "street_name",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Cross Street 1",
+        "fieldName": "cross_street_1",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Cross Street 2",
+        "fieldName": "cross_street_2",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Intersection Street 1",
+        "fieldName": "intersection_street_1",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Intersection Street 2",
+        "fieldName": "intersection_street_2",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Address Type",
+        "fieldName": "address_type",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "City",
+        "fieldName": "city",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Landmark",
+        "fieldName": "landmark",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Facility Type",
+        "fieldName": "facility_type",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Status",
+        "fieldName": "status",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Due Date",
+        "fieldName": "due_date",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "name": "Resolution Description",
+        "fieldName": "resolution_description",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Resolution Action Updated Date",
+        "fieldName": "resolution_action_updated_date",
+        "dataTypeName": "calendar_date"
+      },
+      {
+        "name": "Community Board",
+        "fieldName": "community_board",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Council District",
+        "fieldName": "council_district",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Police Precinct",
+        "fieldName": "police_precinct",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "BBL",
+        "fieldName": "bbl",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Borough",
+        "fieldName": "borough",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "X Coordinate (State Plane)",
+        "fieldName": "x_coordinate_state_plane",
+        "dataTypeName": "number"
+      },
+      {
+        "name": "Y Coordinate (State Plane)",
+        "fieldName": "y_coordinate_state_plane",
+        "dataTypeName": "number"
+      },
+      {
+        "name": "Open Data Channel Type",
+        "fieldName": "open_data_channel_type",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Park Facility Name",
+        "fieldName": "park_facility_name",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Park Borough",
+        "fieldName": "park_borough",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Vehicle Type",
+        "fieldName": "vehicle_type",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Taxi Company Borough",
+        "fieldName": "taxi_company_borough",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Taxi Pick Up Location",
+        "fieldName": "taxi_pick_up_location",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Bridge Highway Name",
+        "fieldName": "bridge_highway_name",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Bridge Highway Direction",
+        "fieldName": "bridge_highway_direction",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Road Ramp",
+        "fieldName": "road_ramp",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Bridge Highway Segment",
+        "fieldName": "bridge_highway_segment",
+        "dataTypeName": "text"
+      },
+      {
+        "name": "Latitude",
+        "fieldName": "latitude",
+        "dataTypeName": "number"
+      },
+      {
+        "name": "Longitude",
+        "fieldName": "longitude",
+        "dataTypeName": "number"
+      },
+      {
+        "name": "Location",
+        "fieldName": "location",
+        "dataTypeName": "point"
+      }
+    ],
+    "seconds": 0.531
+  },
+  {
+    "name": "extent",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=count%28%2A%29+as+n%2Cmin%28created_date%29+as+earliest%2Cmax%28created_date%29+as+latest",
+    "started_at_utc": "2026-09-23T03:03:57.813520+00:00",
+    "http_status": 200,
+    "bytes": 91,
+    "sha256": "db4f093948298cd056ce666c88f1a246aca3d148f45aab2faa522c037d938bdf",
+    "records": 1,
+    "preview": [
+      {
+        "n": "22550280",
+        "earliest": "2020-01-01T00:00:00.000",
+        "latest": "2026-09-21T01:51:08.000"
+      }
+    ],
+    "seconds": 27.594
+  },
+  {
+    "name": "recent_status",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=status%2Ccount%28%2A%29+as+n&%24where=created_date+%3E%3D+%272026-09-14T00%3A00%3A00%27+AND+created_date+%3C+%272026-09-21T00%3A00%3A00%27&%24group=status",
+    "started_at_utc": "2026-09-23T03:03:57.813520+00:00",
+    "http_status": 200,
+    "bytes": 201,
+    "sha256": "83452e24bd34da828d005c9c1f2da077f403680538ba97030ce14ae4899f63fb",
+    "records": 6,
+    "preview": [
+      {
+        "status": "Assigned",
+        "n": "193"
+      },
+      {
+        "status": "Open",
+        "n": "12052"
+      },
+      {
+        "status": "Unspecified",
+        "n": "6"
+      },
+      {
+        "status": "In Progress",
+        "n": "12477"
+      },
+      {
+        "status": "Pending",
+        "n": "17"
+      }
+    ],
+    "seconds": 1.047
+  },
+  {
+    "name": "recent_sample",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccreated_date%2Cclosed_date%2Cagency%2Ccomplaint_type%2Cdescriptor%2Cstatus%2Cborough%2Cresolution_action_updated_date%2Cdue_date&%24where=created_date+%3E%3D+%272026-09-14T00%3A00%3A00%27+AND+created_date+%3C+%272026-09-21T00%3A00%3A00%27&%24order=created_date%2Cunique_key&%24limit=5000",
+    "started_at_utc": "2026-09-23T03:03:58.346614+00:00",
+    "http_status": 200,
+    "bytes": 1370667,
+    "sha256": "e3e327dd1113734ff41d422b7dbc93cc79974eea25e431b6f1c890e03b1df70e",
+    "records": 5000,
+    "seconds": 2.016
+  },
+  {
+    "name": "system_fields",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=%3Aid%2C%3Acreated_at%2C%3Aupdated_at%2Cunique_key%2Ccreated_date%2Cclosed_date%2Cagency%2Ccomplaint_type%2Cdescriptor%2Cstatus%2Cborough%2Cresolution_action_updated_date%2Cdue_date&%24limit=10",
+    "started_at_utc": "2026-09-23T03:03:58.862538+00:00",
+    "http_status": 200,
+    "bytes": 4016,
+    "sha256": "a19b66c92595cf35cac56a5dc070b8dd3ff62202c6504448df1584aa8afc87a2",
+    "records": 10,
+    "preview": [
+      {
+        ":id": "row-ket6_ipfm~vv5k",
+        ":created_at": "2025-12-26T16:03:11.389Z",
+        ":updated_at": "2025-12-26T18:54:08.999Z",
+        "unique_key": "45824247",
+        "created_date": "2020-03-14T15:07:31.000",
+        "closed_date": "2020-03-18T10:13:29.000",
+        "agency": "HPD",
+        "complaint_type": "HEAT/HOT WATER",
+        "descriptor": "APARTMENT ONLY",
+        "status": "Closed",
+        "borough": "QUEENS",
+        "resolution_action_updated_date": "2020-03-18T10:13:29.000"
+      },
+      {
+        ":id": "row-riqy~ed77-zjfg",
+        ":created_at": "2025-12-26T16:03:11.389Z",
+        ":updated_at": "2025-12-26T18:54:08.999Z",
+        "unique_key": "45827597",
+        "created_date": "2020-03-15T00:08:21.000",
+        "closed_date": "2020-03-15T04:05:48.000",
+        "agency": "NYPD",
+        "complaint_type": "Noise - Residential",
+        "descriptor": "Loud Music/Party",
+        "status": "Closed",
+        "borough": "BRONX",
+        "resolution_action_updated_date": "2020-03-15T04:05:55.000"
+      },
+      {
+        ":id": "row-rwur_vrv9_34bw",
+        ":created_at": "2025-12-26T16:03:11.389Z",
+        ":updated_at": "2025-12-26T18:54:08.999Z",
+        "unique_key": "45827043",
+        "created_date": "2020-03-09T18:46:51.000",
+        "closed_date": "2020-03-09T23:10:31.000",
+        "agency": "NYPD",
+        "complaint_type": "Noise - Street/Sidewalk",
+        "descriptor": "Loud Music/Party",
+        "status": "Closed",
+        "borough": "MANHATTAN",
+        "resolution_action_updated_date": "2020-03-09T23:10:33.000"
+      },
+      {
+        ":id": "row-epa4-3vaj_8bhz",
+        ":created_at": "2025-12-26T16:03:11.389Z",
+        ":updated_at": "2025-12-26T18:54:08.999Z",
+        "unique_key": "45828534",
+        "created_date": "2020-03-14T08:58:41.000",
+        "closed_date": "2020-05-29T17:23:12.000",
+        "agency": "HPD",
+        "complaint_type": "FLOORING/STAIRS",
+        "descriptor": "FLOOR",
+        "status": "Closed",
+        "borough": "MANHATTAN",
+        "resolution_action_updated_date": "2020-05-29T17:23:12.000"
+      },
+      {
+        ":id": "row-hctt.8npq.3xq4",
+        ":created_at": "2025-12-26T16:03:11.389Z",
+        ":updated_at": "2025-12-26T18:54:08.999Z",
+        "unique_key": "45823307",
+        "created_date": "2020-03-09T19:15:05.000",
+        "closed_date": "2020-03-11T00:00:00.000",
+        "agency": "DOB",
+        "complaint_type": "General Construction/Plumbing",
+        "descriptor": "Cons - Contrary/Beyond Approved Plans/Permits",
+        "status": "Closed",
+        "borough": "MANHATTAN",
+        "resolution_action_updated_date": "2020-03-11T00:00:00.000"
+      }
+    ],
+    "seconds": 0.344
+  },
+  {
+    "name": "recent_closures_old_requests",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccreated_date%2Cclosed_date%2Cagency%2Ccomplaint_type%2Cdescriptor%2Cstatus%2Cborough%2Cresolution_action_updated_date%2Cdue_date&%24where=created_date+%3C+%272026-08-01T00%3A00%3A00%27+AND+closed_date+%3E%3D+%272026-09-14T00%3A00%3A00%27+AND+closed_date+%3C+%272026-09-21T00%3A00%3A00%27&%24order=closed_date%2Cunique_key&%24limit=30",
+    "started_at_utc": "2026-09-23T03:03:59.208896+00:00",
+    "http_status": 200,
+    "bytes": 9547,
+    "sha256": "703414aebd5db40bac729913bfe804d17be5d1714445520f1a9f0a89c90cc7eb",
+    "records": 30,
+    "preview": [
+      {
+        "unique_key": "50565323",
+        "created_date": "2021-05-14T19:11:31.000",
+        "closed_date": "2026-09-14T00:00:00.000",
+        "agency": "DOB",
+        "complaint_type": "General Construction/Plumbing",
+        "descriptor": "Adjacent Buildings Not Protected",
+        "status": "Closed",
+        "borough": "QUEENS",
+        "resolution_action_updated_date": "2026-09-14T00:00:00.000"
+      },
+      {
+        "unique_key": "52105117",
+        "created_date": "2021-10-06T15:42:02.000",
+        "closed_date": "2026-09-14T00:00:00.000",
+        "agency": "DOB",
+        "complaint_type": "General Construction/Plumbing",
+        "descriptor": "Working Contrary To Stop Work Order",
+        "status": "Closed",
+        "borough": "QUEENS",
+        "resolution_action_updated_date": "2026-09-14T00:00:00.000"
+      },
+      {
+        "unique_key": "56229594",
+        "created_date": "2022-12-12T12:32:29.000",
+        "closed_date": "2026-09-14T00:00:00.000",
+        "agency": "DOB",
+        "complaint_type": "General Construction/Plumbing",
+        "descriptor": "Excavation Undermining Adjacent Building",
+        "status": "Closed",
+        "borough": "QUEENS",
+        "resolution_action_updated_date": "2026-09-14T00:00:00.000"
+      },
+      {
+        "unique_key": "61241313",
+        "created_date": "2024-05-23T08:43:24.000",
+        "closed_date": "2026-09-14T00:00:00.000",
+        "agency": "DOB",
+        "complaint_type": "General Construction/Plumbing",
+        "descriptor": "Building Permit - None",
+        "status": "Closed",
+        "borough": "QUEENS",
+        "resolution_action_updated_date": "2026-09-14T00:00:00.000"
+      },
+      {
+        "unique_key": "63319472",
+        "created_date": "2024-12-06T13:20:46.000",
+        "closed_date": "2026-09-14T00:00:00.000",
+        "agency": "DOB",
+        "complaint_type": "General Construction/Plumbing",
+        "descriptor": "Curb Cut/Driveway/Carport - Illegal",
+        "status": "Closed",
+        "borough": "QUEENS",
+        "resolution_action_updated_date": "2026-09-14T00:00:00.000"
+      }
+    ],
+    "seconds": 3.281
+  },
+  {
+    "name": "historical_sample",
+    "url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json?%24select=unique_key%2Ccreated_date%2Cclosed_date%2Cagency%2Ccomplaint_type%2Cdescriptor%2Cstatus%2Cborough%2Cresolution_action_updated_date%2Cdue_date&%24where=created_date+%3E%3D+%272024-01-01T00%3A00%3A00%27+AND+created_date+%3C+%272024-01-02T00%3A00%3A00%27&%24order=created_date%2Cunique_key&%24limit=1000",
+    "started_at_utc": "2026-09-23T03:04:00.357933+00:00",
+    "http_status": 200,
+    "bytes": 288949,
+    "sha256": "4298af2e1dbaa7b1f081d03621f29263142e5f447361383d20fef5d775ca276c",
+    "records": 1000,
+    "seconds": 0.859
+  }
+]

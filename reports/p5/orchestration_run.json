@@ -1,0 +1,42 @@
+{
+  "pipeline": "nyc311_2025_baseline",
+  "steps": [
+    {
+      "stage": "source_validation",
+      "status": "SKIPPED_COMPLETE",
+      "seconds": 0
+    },
+    {
+      "stage": "spark_transform",
+      "status": "SKIPPED_COMPLETE",
+      "seconds": 0
+    },
+    {
+      "stage": "mysql_ready",
+      "status": "SUCCEEDED",
+      "seconds": 2.745
+    },
+    {
+      "stage": "mysql_load",
+      "status": "SUCCEEDED",
+      "seconds": 0.228
+    },
+    {
+      "stage": "ads",
+      "status": "SKIPPED_COMPLETE",
+      "seconds": 0
+    },
+    {
+      "stage": "spark_ml",
+      "status": "SKIPPED_COMPLETE",
+      "seconds": 0
+    },
+    {
+      "stage": "dashboard",
+      "status": "SUCCEEDED",
+      "seconds": 0.204
+    }
+  ],
+  "succeeded": true,
+  "finished_epoch": 1790568744
+}

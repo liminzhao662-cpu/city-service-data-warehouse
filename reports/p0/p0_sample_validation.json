@@ -1,0 +1,73 @@
+{
+  "source": "data\\raw\\p0\\nyc311_sample_50000.jsonl.gz",
+  "rows": 50000,
+  "unique_keys": 50000,
+  "duplicate_count": 0,
+  "duplicate_examples": [],
+  "strict_order_violations": [],
+  "first_order_key": [
+    "2025-01-01T00:00:12.000",
+    "63577994"
+  ],
+  "last_order_key": [
+    "2025-01-05T04:07:45.000",
+    "63645129"
+  ],
+  "required_missing_counts": {},
+  "status_counts": {
+    "Closed": 49747,
+    "In Progress": 132,
+    "Assigned": 36,
+    "Pending": 30,
+    "Open": 26,
+    "Started": 16,
+    "Unspecified": 13
+  },
+  "top_agencies": {
+    "NYPD": 29212,
+    "HPD": 11481,
+    "DSNY": 2527,
+    "DOT": 1928,
+    "DEP": 1594,
+    "DOB": 841,
+    "DOHMH": 736,
+    "DPR": 557,
+    "TLC": 352,
+    "EDC": 340,
+    "DHS": 235,
+    "DCWP": 184,
+    "DOE": 10,
+    "OTI": 3
+  },
+  "observed_fields": [
+    ":updated_at",
+    "agency",
+    "agency_name",
+    "borough",
+    "closed_date",
+    "community_board",
+    "complaint_type",
+    "council_district",
+    "created_date",
+    "descriptor",
+    "due_date",
+    "incident_zip",
+    "latitude",
+    "location_type",
+    "longitude",
+    "open_data_channel_type",
+    "police_precinct",
+    "resolution_action_updated_date",
+    "status",
+    "unique_key"
+  ],
+  "uncompressed_sha256": "8d335330ee8080345c88972de820f220d1717a5ace4b16287cc60789b7c06bc3",
+  "checks": {
+    "row_count_matches_download": true,
+    "hash_matches_download": true,
+    "keys_unique": true,
+    "strictly_sorted": true,
+    "required_fields_observed": true
+  },
+  "scope_note": "First 50,000 rows of January 2025 ordered by (created_date, unique_key); it is not a random sample or the complete month."
+}

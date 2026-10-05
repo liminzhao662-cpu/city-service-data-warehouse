@@ -1,0 +1,35 @@
+{
+  "fixture_type": "synthetic",
+  "checks": {
+    "same_input_rerun": {
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "passed": true
+    },
+    "business_change": {
+      "current_status": "Closed",
+      "observation_versions": 2,
+      "passed": true
+    },
+    "commit_ack_lost": {
+      "checkpoint_found": 1,
+      "current_rows": 1,
+      "observation_versions": 1,
+      "passed": true
+    },
+    "failed_release_isolation": {
+      "active_before": "2025-baseline-v1",
+      "active_after": "2025-baseline-v1",
+      "rejected_is_active": false,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "tested_at_epoch_ms": 1790141594253
+}

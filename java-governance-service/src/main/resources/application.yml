@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: governance-service
+  datasource:
+    url: ${GOVERNANCE_DB_URL:jdbc:mysql://127.0.0.1:3307/nyc311?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC}
+    username: ${GOVERNANCE_DB_USER}
+    password: ${GOVERNANCE_DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      read-only: false
+      connection-timeout: 5000
+server:
+  port: ${GOVERNANCE_SERVER_PORT:8090}
+  error:
+    include-message: never

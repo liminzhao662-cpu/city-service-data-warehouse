@@ -1,0 +1,35 @@
+{
+  "release_key": "2025-baseline-v1",
+  "expected_rows": 3655040,
+  "quality_rules": [
+    {"rule_key": "DQ001", "name": "明细层行数对账", "dimension": "完整性", "severity": "BLOCK", "metric": "dwd_row_count", "operator": "eq", "threshold": 3655040},
+    {"rule_key": "DQ002", "name": "工单主键唯一", "dimension": "唯一性", "severity": "BLOCK", "metric": "duplicate_key_rows", "operator": "eq", "threshold": 0},
+    {"rule_key": "DQ003", "name": "必填字段完整", "dimension": "完整性", "severity": "BLOCK", "metric": "required_field_null_rows", "operator": "eq", "threshold": 0},
+    {"rule_key": "DQ004", "name": "创建日期在基线范围内", "dimension": "有效性", "severity": "BLOCK", "metric": "year_out_of_scope_rows", "operator": "eq", "threshold": 0},
+    {"rule_key": "DQ005", "name": "经纬度成对出现", "dimension": "一致性", "severity": "WARN", "metric": "coordinate_pair_mismatch_rows", "operator": "lte", "threshold": 0},
+    {"rule_key": "DQ006", "name": "经纬度取值合理", "dimension": "有效性", "severity": "WARN", "metric": "coordinate_out_of_range_rows", "operator": "lte", "threshold": 0},
+    {"rule_key": "DQ007", "name": "关闭时间不早于创建时间", "dimension": "一致性", "severity": "WARN", "metric": "negative_duration_rows", "operator": "lte", "threshold": 0},
+    {"rule_key": "DQ008", "name": "已关闭工单具有关闭时间", "dimension": "一致性", "severity": "WARN", "metric": "closed_without_date_rows", "operator": "rate_lte", "threshold": 0.001},
+    {"rule_key": "DQ009", "name": "汇总层与明细层总量一致", "dimension": "一致性", "severity": "BLOCK", "metric": "dws_reconciliation_gap", "operator": "eq", "threshold": 0},
+    {"rule_key": "DQ010", "name": "MySQL发布层与明细层总量一致", "dimension": "一致性", "severity": "BLOCK", "metric": "mysql_reconciliation_gap", "operator": "eq", "threshold": 0}
+  ],
+  "assets": [
+    {"asset_key": "raw_ticket", "name_cn": "公共服务工单原始数据", "layer": "原始层", "storage_type": "JSONL.GZ", "physical_name": "data/raw/nyc311/year=2025", "owner": "数据工程", "update_cycle": "年度基线/按更新时间增量", "primary_key": "unique_key", "partitioning": "year/month", "description": "官方接口分页落盘的不可变原始批次"},
+    {"asset_key": "dwd_ticket", "name_cn": "公共服务工单明细表", "layer": "明细层", "storage_type": "Parquet", "physical_name": "data/warehouse/release=2025_baseline/dwd_ticket", "owner": "数据工程", "update_cycle": "随发布批次", "primary_key": "unique_key", "partitioning": "created_year/created_month", "description": "标准化、质量标记及主键去重后的工单明细"},
+    {"asset_key": "dws_created_daily", "name_cn": "机构区域状态日汇总表", "layer": "汇总层", "storage_type": "Parquet", "physical_name": "data/warehouse/release=2025_baseline/dws_created_daily", "owner": "数据工程", "update_cycle": "随发布批次", "primary_key": "created_day+agency+borough+status", "partitioning": "agency", "description": "按日期、机构、区域和状态聚合的工单量"},
+    {"asset_key": "mysql_ticket_current", "name_cn": "工单当前状态表", "layer": "服务层", "storage_type": "MySQL", "physical_name": "nyc311.ticket_current", "owner": "数据工程", "update_cycle": "分块增量合并", "primary_key": "unique_key", "partitioning": "无", "description": "每个工单保留一条当前状态记录"},
+    {"asset_key": "mysql_ticket_observation", "name_cn": "工单历史版本表", "layer": "服务层", "storage_type": "MySQL", "physical_name": "nyc311.ticket_observation", "owner": "数据工程", "update_cycle": "内容变化时新增", "primary_key": "observation_id；unique_key+content_hash唯一", "partitioning": "无", "description": "保留内容发生变化的工单版本"},
+    {"asset_key": "ads_daily_status", "name_cn": "工单状态日指标表", "layer": "应用层", "storage_type": "MySQL", "physical_name": "nyc311.ads_daily_status", "owner": "数据工程", "update_cycle": "随发布版本", "primary_key": "release_id+created_day+status", "partitioning": "无", "description": "面向看板的每日状态指标"},
+    {"asset_key": "ads_agency_status", "name_cn": "机构区域状态指标表", "layer": "应用层", "storage_type": "MySQL", "physical_name": "nyc311.ads_agency_status", "owner": "数据工程", "update_cycle": "随发布版本", "primary_key": "release_id+agency+borough+status", "partitioning": "无", "description": "面向机构和区域分析的汇总指标"},
+    {"asset_key": "ads_complaint", "name_cn": "问题类型指标表", "layer": "应用层", "storage_type": "MySQL", "physical_name": "nyc311.ads_complaint", "owner": "数据工程", "update_cycle": "随发布版本", "primary_key": "release_id+complaint_type", "partitioning": "无", "description": "面向问题类型分析的汇总指标"}
+  ],
+  "lineage": [
+    {"upstream": "raw_ticket", "downstream": "dwd_ticket", "transform": "Spark SQL标准化、质量标记与去重"},
+    {"upstream": "dwd_ticket", "downstream": "dws_created_daily", "transform": "按日、机构、区域和状态汇总"},
+    {"upstream": "dwd_ticket", "downstream": "mysql_ticket_current", "transform": "暂存校验、内容哈希比较与增量合并"},
+    {"upstream": "dwd_ticket", "downstream": "mysql_ticket_observation", "transform": "内容变化版本追加"},
+    {"upstream": "mysql_ticket_current", "downstream": "ads_daily_status", "transform": "活动发布版本按日和状态聚合"},
+    {"upstream": "mysql_ticket_current", "downstream": "ads_agency_status", "transform": "活动发布版本按机构、区域和状态聚合"},
+    {"upstream": "mysql_ticket_current", "downstream": "ads_complaint", "transform": "活动发布版本按问题类型聚合"}
+  ]
+}

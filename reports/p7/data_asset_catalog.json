@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-09-28T05:27:42.743323+00:00",
+  "assets": [
+    {
+      "asset_key": "raw_ticket",
+      "name_cn": "公共服务工单原始数据",
+      "layer": "原始层",
+      "storage_type": "JSONL.GZ",
+      "physical_name": "data/raw/nyc311/year=2025",
+      "owner": "数据工程",
+      "update_cycle": "年度基线/按更新时间增量",
+      "primary_key": "unique_key",
+      "partitioning": "year/month",
+      "description": "官方接口分页落盘的不可变原始批次",
+      "row_count": 3655040,
+      "column_count": 20,
+      "physical_status": "AVAILABLE"
+    },
+    {
+      "asset_key": "dwd_ticket",
+      "name_cn": "公共服务工单明细表",
+      "layer": "明细层",
+      "storage_type": "Parquet",
+      "physical_name": "data/warehouse/release=2025_baseline/dwd_ticket",
+      "owner": "数据工程",
+      "update_cycle": "随发布批次",
+      "primary_key": "unique_key",
+      "partitioning": "created_year/created_month",
+      "description": "标准化、质量标记及主键去重后的工单明细",
+      "row_count": 3655040,
+      "column_count": 24,
+      "physical_status": "AVAILABLE"
+    },
+    {
+      "asset_key": "dws_created_daily",
+      "name_cn": "机构区域状态日汇总表",
+      "layer": "汇总层",
+      "storage_type": "Parquet",
+      "physical_name": "data/warehouse/release=2025_baseline/dws_created_daily",
+      "owner": "数据工程",
+      "update_cycle": "随发布批次",
+      "primary_key": "created_day+agency+borough+status",
+      "partitioning": "agency",
+      "description": "按日期、机构、区域和状态聚合的工单量",
+      "row_count": 34368,
+      "column_count": 5,
+      "physical_status": "AVAILABLE"
+    },
+    {
+      "asset_key": "mysql_ticket_current",
+      "name_cn": "工单当前状态表",
+      "layer": "服务层",
+      "storage_type": "MySQL",
+      "physical_name": "nyc311.ticket_current",
+      "owner": "数据工程",
+      "update_cycle": "分块增量合并",
+      "primary_key": "unique_key",
+      "partitioning": "无",
+      "description": "每个工单保留一条当前状态记录",
+      "row_count": 3655040,
+      "column_count": 25,
+      "physical_status": "AVAILABLE"
+    },
+    {
+      "asset_key": "mysql_ticket_observation",
+      "name_cn": "工单历史版本表",
+      "layer": "服务层",
+      "storage_type": "MySQL",
+      "physical_name": "nyc311.ticket_observation",
+      "owner": "数据工程",
+      "update_cycle": "内容变化时新增",
+      "primary_key": "observation_id；unique_key+content_hash唯一",
+      "partitioning": "无",
+      "description": "保留内容发生变化的工单版本",
+      "row_count": 3655040,
+      "column_count": 11,
+      "physical_status": "AVAILABLE"
+    },
+    {
+      "asset_key": "ads_daily_status",
+      "name_cn": "工单状态日指标表",
+      "layer": "应用层",
+      "storage_type": "MySQL",
+      "physical_name": "nyc311.ads_daily_status",
+      "owner": "数据工程",
+      "update_cycle": "随发布版本",
+      "primary_key": "release_id+created_day+status",
+      "partitioning": "无",
+      "description": "面向看板的每日状态指标",
+      "row_count": 2238,
+      "column_count": 4,
+      "physical_status": "AVAILABLE"
+    },
+    {
+      "asset_key": "ads_agency_status",
+      "name_cn": "机构区域状态指标表",
+      "layer": "应用层",
+      "storage_type": "MySQL",
+      "physical_name": "nyc311.ads_agency_status",
+      "owner": "数据工程",
+      "update_cycle": "随发布版本",
+      "primary_key": "release_id+agency+borough+status",
+      "partitioning": "无",
+      "description": "面向机构和区域分析的汇总指标",
+      "row_count": 211,
+      "column_count": 5,
+      "physical_status": "AVAILABLE"
+    },
+    {
+      "asset_key": "ads_complaint",
+      "name_cn": "问题类型指标表",
+      "layer": "应用层",
+      "storage_type": "MySQL",
+      "physical_name": "nyc311.ads_complaint",
+      "owner": "数据工程",
+      "update_cycle": "随发布版本",
+      "primary_key": "release_id+complaint_type",
+      "partitioning": "无",
+      "description": "面向问题类型分析的汇总指标",
+      "row_count": 190,
+      "column_count": 3,
+      "physical_status": "AVAILABLE"
+    }
+  ],
+  "lineage": [
+    {
+      "upstream": "raw_ticket",
+      "downstream": "dwd_ticket",
+      "transform": "Spark SQL标准化、质量标记与去重"
+    },
+    {
+      "upstream": "dwd_ticket",
+      "downstream": "dws_created_daily",
+      "transform": "按日、机构、区域和状态汇总"
+    },
+    {
+      "upstream": "dwd_ticket",
+      "downstream": "mysql_ticket_current",
+      "transform": "暂存校验、内容哈希比较与增量合并"
+    },
+    {
+      "upstream": "dwd_ticket",
+      "downstream": "mysql_ticket_observation",
+      "transform": "内容变化版本追加"
+    },
+    {
+      "upstream": "mysql_ticket_current",
+      "downstream": "ads_daily_status",
+      "transform": "活动发布版本按日和状态聚合"
+    },
+    {
+      "upstream": "mysql_ticket_current",
+      "downstream": "ads_agency_status",
+      "transform": "活动发布版本按机构、区域和状态聚合"
+    },
+    {
+      "upstream": "mysql_ticket_current",
+      "downstream": "ads_complaint",
+      "transform": "活动发布版本按问题类型聚合"
+    }
+  ]
+}

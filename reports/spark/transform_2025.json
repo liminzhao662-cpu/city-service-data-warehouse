@@ -1,0 +1,36 @@
+{
+  "year": 2025,
+  "sample_files": 0,
+  "input_file_count": 189,
+  "source_rows": 3655040,
+  "rejected_rows": 0,
+  "current_rows": 3655040,
+  "distinct_keys": 3655040,
+  "flagged_rows": 10260,
+  "quality_flag_counts": {
+    "ACTIVE_WITH_CLOSED_DATE": 4159,
+    "NEGATIVE_DURATION": 916,
+    "CLOSED_WITHOUT_DATE": 6024
+  },
+  "month_counts": {
+    "01": 348180,
+    "02": 255364,
+    "03": 281221,
+    "04": 272549,
+    "05": 295058,
+    "06": 306442,
+    "07": 315883,
+    "08": 304039,
+    "09": 302684,
+    "10": 336612,
+    "11": 304905,
+    "12": 332103
+  },
+  "parquet_rows": 3655040,
+  "mysql_export_rows": 3655040,
+  "dws_rows": 34368,
+  "elapsed_seconds": 90.197,
+  "spark_version": "4.0.4",
+  "shuffle_partitions": 24,
+  "output_root": "E:\\big data\\data\\warehouse\\release=2025_baseline"
+}

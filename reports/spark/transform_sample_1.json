@@ -1,0 +1,25 @@
+{
+  "year": 2025,
+  "sample_files": 1,
+  "input_file_count": 1,
+  "source_rows": 20000,
+  "rejected_rows": 0,
+  "current_rows": 20000,
+  "distinct_keys": 20000,
+  "flagged_rows": 67,
+  "quality_flag_counts": {
+    "CLOSED_WITHOUT_DATE": 53,
+    "ACTIVE_WITH_CLOSED_DATE": 12,
+    "NEGATIVE_DURATION": 2
+  },
+  "month_counts": {
+    "01": 20000
+  },
+  "parquet_rows": 20000,
+  "mysql_export_rows": 20000,
+  "dws_rows": 181,
+  "elapsed_seconds": 34.779,
+  "spark_version": "4.0.4",
+  "shuffle_partitions": 24,
+  "output_root": "E:\\big data\\data\\warehouse\\smoke"
+}

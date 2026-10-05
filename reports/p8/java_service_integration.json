@@ -1,0 +1,15 @@
+{
+  "status": "PASSED",
+  "activeAssets": 8,
+  "lineageEdges": 7,
+  "enabledRules": 10,
+  "latestRunStatus": "PASSED",
+  "latestCheckedRows": 3655040,
+  "filteredAssetTotal": 1,
+  "dwdLineageEdges": 4,
+  "passedRunTotal": 3,
+  "qualityResultCount": 10,
+  "oversizedPageHttpStatus": 400,
+  "missingAssetHttpStatus": 404,
+  "jar": "E:\\big data\\java-governance-service\\target\\governance-service-1.0.0.jar"
+}
